@@ -1,35 +1,69 @@
-(function(){
- var NUMERO="51926498836";
- function wa(msg){return "https://wa.me/"+NUMERO+"?text="+encodeURIComponent(msg);}
+/* ==========================================================
+   config.js  ·  COMPARTIDO por todo el equipo
+   Viene en el primer commit (esqueleto). Nadie lo modifica
+   salvo para cambiar el número de WhatsApp.
+   ========================================================== */
+window.TITAN = (function () {
+  var numero = "51926498836"; // número con código de país, sin + ni espacios
 
- // Botón flotante
- document.getElementById("waFloat").href=wa("Hola, quiero información sobre las membresías del gimnasio");
-
- // Botones de planes
- document.querySelectorAll("[data-plan]").forEach(function(b){
-  b.addEventListener("click",function(){
-   window.open(wa("Hola, quiero información sobre el plan "+b.dataset.plan+" del gimnasio"),"_blank","noopener");
-  });
- });
-
- // Menú móvil
- var burger=document.getElementById("burger"),menu=document.getElementById("menu");
- burger.addEventListener("click",function(){
-  var open=menu.classList.toggle("open");
-  burger.setAttribute("aria-expanded",open);
- });
- menu.querySelectorAll("a").forEach(function(a){
-  a.addEventListener("click",function(){menu.classList.remove("open");burger.setAttribute("aria-expanded","false");});
- });
-
- // Animación al hacer scroll
- var items=document.querySelectorAll(".rv");
- if("IntersectionObserver" in window){
-  var io=new IntersectionObserver(function(es){
-   es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});
-  },{threshold:.15});
-  items.forEach(function(el,i){el.style.transitionDelay=(i%3)*0.12+"s";io.observe(el);});
- }else{items.forEach(function(el){el.classList.add("in");});}
-
- document.getElementById("year").textContent=new Date().getFullYear();
+  return {
+    numero: numero,
+    // Devuelve el enlace de WhatsApp con el mensaje ya escrito
+    wa: function (mensaje) {
+      return "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+    }
+  };
 })();
+/* ==========================================================
+   p1-portada.js  ·  PERSONA 1
+   Menú, tema, contadores, calculadora IMC y extras
+   ========================================================== */
+
+// [P1-1] Menú móvil y cambio de tema claro/oscuro
+// pega aquí el contenido de P1-1
+// [/P1-1]
+
+// [P1-2] Contadores animados de la portada
+// pega aquí el contenido de P1-2
+// [/P1-2]
+
+// [P1-3] Calculadora de IMC
+// pega aquí el contenido de P1-3
+// [/P1-3]
+
+// [P1-4] Barra de progreso, botón volver arriba, animación al scroll y menú activo
+// pega aquí el contenido de P1-4
+// [/P1-4]
+/* ==========================================================
+   p2-contenido.js  ·  PERSONA 2
+   Horario de clases (pestañas) y ventana de inscripción a planes
+   (Nosotros y Entrenadores no necesitan JavaScript: son HTML + CSS)
+   ========================================================== */
+
+// [P2-3] Horario de clases por día
+// pega aquí el contenido de P2-3
+// [/P2-3]
+
+// [P2-4] Ventana para elegir un plan y enviarlo por WhatsApp
+// pega aquí el contenido de P2-4
+// [/P2-4]
+/* ==========================================================
+   p3-comunidad.js  ·  PERSONA 3
+   FAQ, reserva de clase de prueba, "abierto ahora" y footer
+   ========================================================== */
+
+// [P3-1] Preguntas frecuentes: solo una abierta a la vez
+// pega aquí el contenido de P3-1
+// [/P3-1]
+
+// [P3-2] Reserva de clase de prueba por WhatsApp
+// pega aquí el contenido de P3-2
+// [/P3-2]
+
+// [P3-3] Estado "abierto ahora" según la hora de Perú
+// pega aquí el contenido de P3-3
+// [/P3-3]
+
+// [P3-4] Botón flotante de WhatsApp y año del footer
+// pega aquí el contenido de P3-4
+// [/P3-4]
