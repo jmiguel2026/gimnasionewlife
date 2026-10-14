@@ -64,12 +64,73 @@
 </section>
 
 <!-- [P1-3] Calculadora de IMC -->
-<!-- pega aquí el contenido de P1-3 -->
+<section class="alt" id="imc">
+ <div class="wrap imc-grid">
+  <div class="rv">
+   <span class="eyebrow">Tu punto de partida</span>
+   <h2>Calcula tu <em>IMC</em></h2>
+   <p class="lead">Ingresa tu peso y tu estatura y te sugerimos por dónde empezar. Es solo una referencia general, no un diagnóstico: en tu evaluación física lo medimos con más detalle.</p>
+  </div>
+  <form class="imc-card rv" id="imcForm" novalidate>
+   <div class="row">
+    <label>Peso (kg)
+     <input type="number" id="imcPeso" min="30" max="300" step="0.1" inputmode="decimal" placeholder="Ej. 70">
+    </label>
+    <label>Estatura (cm)
+     <input type="number" id="imcAlt" min="100" max="250" step="1" inputmode="numeric" placeholder="Ej. 170">
+    </label>
+   </div>
+   <button class="btn btn-gold" type="submit">Calcular</button>
+   <p class="imc-err" id="imcErr" role="alert"></p>
+   <div class="imc-out" id="imcOut" aria-live="polite" hidden>
+    <div class="imc-top">
+     <span class="imc-num" id="imcNum">0</span>
+     <span class="imc-cat" id="imcCat"></span>
+    </div>
+    <div class="imc-bar" aria-hidden="true"><span class="imc-pin" id="imcPin"></span></div>
+    <div class="imc-scale" aria-hidden="true">
+     <span style="--p:0%">15</span><span style="--p:14%">18.5</span><span style="--p:40%">25</span><span style="--p:60%">30</span><span style="--p:100%">40</span>
+    </div>
+    <p id="imcTip"></p>
+    <a href="#planes" class="btn btn-ghost">Ver planes</a>
+   </div>
+  </form>
+ </div>
+</section>
 <!-- [/P1-3] -->
 
 <!-- [P2-1] Nosotros -->
-<!-- pega aquí el contenido de P2-1 -->
-<!-- [/P2-1] -->
+<section class="about" id="nosotros">
+ <div class="wrap about-grid">
+  <div class="about-img rv">
+   <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=900&q=70" alt="Zona de pesas del gimnasio" width="900" height="1125" loading="lazy">
+   <div class="about-badge"><b>+1,000</b><span>m² de instalaciones</span></div>
+  </div>
+  <div class="rv">
+   <span class="eyebrow">Nosotros</span>
+   <h2>Un espacio hecho para <em>entrenar en serio</em></h2>
+   <p class="lead">En Titán Gym combinamos más de 1,000 m² de instalaciones modernas con un equipo de entrenadores que te acompaña desde tu primera rutina hasta tu próxima meta, ya sea bajar de peso, ganar músculo o mejorar tu rendimiento.</p>
+   <div class="feats">
+    <div class="feat">
+     <svg viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>
+     <h3>Zona de pesas libres</h3><p>Mancuernas, racks, barras olímpicas y máquinas de fuerza.</p>
+    </div>
+    <div class="feat">
+     <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+     <h3>Área de cardio</h3><p>Caminadoras, bicicletas y elípticas con aire acondicionado.</p>
+    </div>
+    <div class="feat">
+     <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+     <h3>Entrenadores expertos</h3><p>Rutinas personalizadas y seguimiento de tu progreso.</p>
+    </div>
+    <div class="feat">
+     <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+     <h3>Clases grupales</h3><p>Funcional, spinning, zumba y boxeo durante toda la semana.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
 
 <!-- [P2-2] Entrenadores -->
 <!-- pega aquí el contenido de P2-2 -->
